@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <button type="submit" id="lososGuess">Сколько лососей ты сегодня?</button>
+    <p id="answer"> </p>
+
+    <script>
+        const randomNumber = Math.floor(Math.random() * 10) + 1;
+        console.log('Количество Лососей', randomNumber);
+
+
+        function checkLosos() {
+            console.log(randomNumber);
+            if (randomNumber == 1) {
+                answer.textContent = "В тебе сегодня " + randomNumber + " лосось";
+            }
+            else if (randomNumber<5) {
+                answer.textContent = "В тебе сегодня " + randomNumber + " лосося";
+            }
+            else if (randomNumber>=5) {
+                answer.textContent = "В тебе сегодня " + randomNumber + " лососей";
+            }
+        }
+
+        lososGuess.addEventListener('click', checkLosos);
+
+
+    </script>
+</body>
+
+</html>
